@@ -38,6 +38,8 @@ oplossing:
 
 Let op dat je de syntax van de oplossing niet aanpast. Vul enkel het antwoord in.
 
+Tip: je kan de markdown preview gebruiken om de vragen te lezen.
+
 Veel succes!
 
 ## Vragen
@@ -255,5 +257,233 @@ D: `SHOW GRANTS FOR 'user'@'127.0.0.1';`
 ---
 oplossing:
     vraag: 12
+    antwoord: C
+...
+
+### Vraag 13
+
+Gegeven de table mysql.user:
+
++------+-----------+
+| User | Host      |
++------+-----------+
+| root | 127.0.0.1 |
+| root | ::1       |
+| user | localhost |
+| root | localhost |
++------+-----------+
+
+Met welk statement kan je de MySQL gebruiker 'user' verwijderen?
+
+A: `DROP USER ‘user’;`
+
+B: `DROP USER ‘user’@’localhost’;`
+
+C: `DELETE ‘user’ FROM user;`
+
+D: `DELETE FROM mysql.user;`
+
+---
+oplossing:
+    vraag: 13
+    antwoord: B
+...
+
+### Vraag 14
+
+Welke bewering is correct?
+
+A: Voor het hashen van gegevens is een encryptie sleutel nodig.
+
+B: Hashen van gegevens is veiliger wanneer gebruik gemaakt wordt van een vinegar.
+
+C: Een salted hash voorkomt dat een aanvaller de database kan uitlezen.
+
+D: Een hashberekening kan niet ongedaan worden door de omgekeerde bewerking te uit te voeren.
+
+---
+oplossing:
+    vraag: 14
+    antwoord: D
+...
+
+### Vraag 15
+
+Met welk hash algoritme kunnen gevoelige gegevens zoals wachtwoorden veiliger in een database opgeslagen worden?
+
+A: Voor het hashen van gegevens is een encryptie sleutel nodig.
+
+B: Hashen van gegevens is veiliger wanneer gebruik gemaakt wordt van een vinegar.
+
+C: Een salted hash voorkomt dat een aanvaller de database kan uitlezen.
+
+D: Een hashberekening kan niet ongedaan worden door de omgekeerde bewerking te uit te voeren.
+
+---
+oplossing:
+    vraag: 15
+    antwoord: D
+...
+
+### Vraag 16
+
+Welk MySQL datatype kan gebruikt worden om een lijst van mogelijke waardes op te geven en waarvan meerdere opties opgegeven kunnen worden?
+
+A: `SET`
+
+B: `ENUM`
+
+C: `ARRAY`
+
+D: `LIST`
+
+---
+oplossing:
+    vraag: 16
+    antwoord: A
+...
+
+### Vraag 17
+
+Wat is een voorbeeld van de SQL Data Definition Language (DDL) CRUD Update functie?
+
+
+A: `ALTER COLUMN`
+
+B: `UPDATE`
+
+C: `DROP TABLE`
+
+D: `INSERT INTO`
+
+---
+oplossing:
+    vraag: 17
+    antwoord: A
+...
+
+### Vraag 18
+
+Wat is een voorbeeld van de SQL Data Manipulation Language (DML)  CRUD Create functie?
+
+A: `SELECT`
+
+B: `CREATE TABLE`
+
+C: `INNER JOIN`
+
+D: `INSERT INTO`
+
+---
+oplossing:
+    vraag: 18
+    antwoord: D
+...
+
+### Vraag 19
+
+Wat is een voorbeeld van de SQL Data Manipulation Language (DML) CRUD Read functie?
+
+A: `ALTER COLUMN`
+
+B: `CREATE TABLE`
+
+C: `INNER JOIN`
+
+D: `INSERT INTO`
+
+---
+oplossing:
+    vraag: 19
+    antwoord: C
+...
+
+### Vraag 20
+
+Na het uitvoeren van:
+
+```bash
+mysql -u root
+```
+
+krijg je volgende foutmelding:
+
+```text
+ERROR 2002 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+```
+
+Wat is het probleem?
+
+A: Het DBMS is niet opgestart.
+
+B: De host parameter ontbreekt: `mysql -u root -h 127.0.0.1`
+
+C: De paswoord parameter ontbreekt: `mysql -u root -p`
+
+D: Het paswoord ontbreekt: `mysql -u root -p letmein`
+
+---
+oplossing:
+    vraag: 20
+    antwoord: A
+...
+
+### Vraag 21
+
+Welke SQL constraint is noodzakelijk voor een Primary Key?
+
+A: `NOT NULL`
+
+B: `AUTO_INCREMENT`
+
+C: `UNIQUE`
+
+D: Geen enkele SQL constraint is noodzakelijk
+
+---
+oplossing:
+    vraag: 21
+    antwoord: D
+...
+
+### Vraag 22
+
+Na het uitvoeren van:
+
+```sql
+CREATE TABLE employees(
+   id int(5) AUTO_INCREMENT,
+   name varchar(255) NOT NULL,
+   job_description enum('developer', 'manager', 'tester', 'operations') NOT NULL,
+   primary key(id)
+);
+
+INSERT INTO employees(name, job_description, id)
+VALUES
+('Nico', 'developer', 42),
+('Sille', 'operations', 666),
+('Franky', 'manager,tester', 7);
+```
+
+krijg je volgende output:
+
+```text
+Query OK, 3 rows affected, 1 warning (0.012 sec)
+Records: 3 Duplicates: 0 Warnings: 1
+```
+
+Wat is de warning?
+
+A: De kolom *id* is AUTO_INCREMENT waardoor je zelf geen waarden mag opgeven.
+
+B: Bij INSERT INTO moet de volgorde van de kolommen *id*, *name*, *job_description* zijn.
+
+C: Het datatype van kolom *job_description* zou SET moeten zijn in plaats van ENUM.
+
+D: De waarde van data in de kolom *id* mag niet groter zijn dan 5.
+
+---
+oplossing:
+    vraag: 22
     antwoord: C
 ...
