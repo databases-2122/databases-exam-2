@@ -582,3 +582,28 @@ oplossing:
     vraag: 24
     antwoord: B
 ...
+
+### Vraag 25
+
+Bij het uitvoeren van een query:
+
+```sql
+UPDATE employees
+SET name = 'Jonas';
+```
+
+Wat is een mogelijk probleem?
+
+A: Deze query zal niets veranderen in de tabel als er geen record met als naam 'Jonas' bestaat.
+
+B: Deze query selecteert enkel de records met als naam 'Jonas' en maakt deze NULL.
+
+C: Door het ontbreken van een `WHERE` clausule in de query zijn alle namen veranderd in 'Jonas'.
+
+D: Door het ontbraken van een `SELECT` clausule zal er niets veranderen in te tabel.
+
+---
+oplossing:
+    vraag: 25
+    antwoord: C
+...
