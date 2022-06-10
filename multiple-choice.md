@@ -452,7 +452,7 @@ Na het uitvoeren van:
 
 ```sql
 CREATE TABLE employees(
-   id int(5) AUTO_INCREMENT,
+   id int(5) AUTO_INCREMENT NOT NULL,
    name varchar(255) NOT NULL,
    job_description enum('developer', 'manager', 'tester', 'operations') NOT NULL,
    primary key(id)
@@ -472,7 +472,7 @@ Query OK, 3 rows affected, 1 warning (0.012 sec)
 Records: 3 Duplicates: 0 Warnings: 1
 ```
 
-Wat is de warning?
+Wat is de oorzaak van de warning?
 
 A: De kolom *id* is AUTO_INCREMENT waardoor je zelf geen waarden mag opgeven.
 
@@ -486,4 +486,99 @@ D: De waarde van data in de kolom *id* mag niet groter zijn dan 5.
 oplossing:
     vraag: 22
     antwoord: C
+...
+
+### Vraag 23
+
+Na het uitvoeren van:
+
+```sql
+CREATE TABLE employees(
+   id int(5) AUTO_INCREMENT NOT NULL,
+   name varchar(255) NOT NULL,
+   job_description enum('dev', 'test', 'ops'),
+   primary key(id)
+);
+
+INSERT INTO employees(name, job_description, id)
+VALUES
+('Nico', 'dev', 42),
+('Sille', 'ops', 666),
+('Franky', 'test', 7);
+
+ALTER TABLE employees MODIFY COLUMN job_description enum('developer', 'operations', 'tester');
+
+```
+
+krijg je volgende output:
+
+```text
+Query OK, 3 rows affected, 3 warnings (0.097 sec)
+Records: 3  Duplicates: 0  Warnings: 3
+```
+
+Wat is de oorzaak van de warning?
+
+A: De volgorde van waardes in de enum houden niet de juiste volgorde aan.
+
+B: De nieuwe namen in de enum zorgen ervoor dat data verloren gaat.
+
+C: Bij een `MODIFY COLUMN` dienen alle kolommen van de tabel opnieuw gedefinieerd te worden.
+
+D: De nieuwe namen in de enum worden automatisch overgenomen waardoor records zijn aangepast.
+
+---
+oplossing:
+    vraag: 23
+    antwoord: B
+...
+
+### Vraag 24
+
+Na het uitvoeren van:
+
+```sql
+CREATE TABLE employees(
+   id int(5) AUTO_INCREMENT NOT NULL,
+   name varchar(255) NOT NULL,
+   job_description enum('dev', 'test', 'ops'),
+   primary key(id)
+);
+
+INSERT INTO employees(name, job_description, id)
+VALUES
+('Nico', 'dev', 42),
+('Sille', 'ops', 666),
+('Franky', 'test', 7);
+
+CREATE TABLE teachers(
+   id int(5) AUTO_INCREMENT NOT NULL,
+   name varchar(255) NOT NULL,
+   task varchar(255) NOT NULL,
+   primary key(id)
+);
+
+INSERT INTO teachers(
+    task,
+    name,
+    id    
+)
+SELECT name, job_description, id FROM employees;
+
+```
+
+Wat is een mogelijk probleem bij het uitvoeren van deze queries?
+
+A: Alle records van employees worden in *teachers* gekopieerd, maar er worden nieuwe id's in de tabel *teachers* aangemaakt.
+
+B: Alle records van employees worden in *teachers* gekopieerd, maar de kolommen *name* en *task* zijn omgewisseld.
+
+C: Er worden geen records gekopieerd doordat het type van de kolom *task* niet overeen komt met het type van de kolom *job_description*.
+
+D: De tabel *employees* is leeg doordat alle records zijn verplaatst naar *teachers*.
+
+---
+oplossing:
+    vraag: 24
+    antwoord: B
 ...
