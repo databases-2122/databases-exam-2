@@ -607,3 +607,149 @@ oplossing:
     vraag: 25
     antwoord: C
 ...
+
+### Vraag 26
+
+Met welke query is het mogelijk volgende uitvoer te verkrijgen?
+
+```text
++----------------+-------------+
+| cust_name      | cust_city   |
++----------------+-------------+
+| Bugs Bunny     | Chicago     |
+| Elmer Fudd     | Chicago     |
+| Mouse House    | Columbus    |
+| Coyote Inc.    | Detroit     |
+| Tasmania Devil | Detroit     |
+| Daffy Duck     | Los Angeles |
+| Pep E. LaPew   | Los Angeles |
+| Wascals        | Muncie      |
+| Yosemite Place | Phoenix     |
++----------------+-------------+
+```
+
+A: `SELECT cust_name, cust_city FROM customers ORDER BY cust_city, cust_name;`
+
+B: `SELECT cust_name, cust_city FROM customers ORDER BY cust_name, cust_city;`
+
+C: `SELECT cust_name, cust_city FROM customers ORDER BY cust_name DESC, cust_city;`
+
+D: `SELECT cust_name, cust_city FROM customers ORDER BY cust_name ASC, cust_city;`
+
+---
+oplossing:
+    vraag: 26
+    antwoord: A
+...
+
+### Vraag 27
+
+Met welke query is het mogelijk om de laatste 3 records volgens *finish_number* in oplopende volgorde op te vragen?
+
+Gewenste output:
+
+```text
++---------------+--------------+
+| finish_number | name         |
++---------------+--------------+
+|            90 | Alina        |
+|            91 | Bob          |
+|            92 | Chelsea      |
++---------------+--------------+
+```
+
+A: `SELECT * FROM (SELECT finish_number, name FROM runners ORDER BY finish_number DESC LIMIT 3) AS list ORDER BY finish_number;`
+
+B: `SELECT finish_number, name FROM runners ORDER BY finish_number LIMIT 3, 3;`
+
+C: `SELECT * FROM (SELECT finish_number, name FROM runners ORDER BY finish_number DESC) AS list ORDER BY finish_number LIMIT 3;`
+
+D: `SELECT * FROM (SELECT finish_number, name FROM runners ORDER BY finish_number DESC) AS list ORDER BY finish_number LIMIT 3, 3;`
+
+---
+oplossing:
+    vraag: 27
+    antwoord: A
+...
+
+### Vraag 28
+
+Gegeven een (gedeeltelijke) tabel met metadata van sensoren:
+
+```text
++---------------+--------------+
+| sensor_id     | city         |
++---------------+--------------+
+|            42 | Brugge       |
+|            63 | Brugge       |
+|            99 | Oostende     |
++---------------+--------------+
+```
+
+Hoe kan het aantal steden met sensoren uit deze tabel gevonden worden?
+
+A: `SELECT COUNT(*) FROM sensors;`
+
+B: `SELECT COUNT(DISTINCT city) FROM sensors;`
+
+C: `SELECT COUNT(UNIQUE city) FROM sensors;`
+
+D: `COUNT(DISTINCT(SELECT city FROM sensors);`
+
+---
+oplossing:
+    vraag: 28
+    antwoord: B
+...
+
+### Vraag 29
+
+Gegeven volgende data:
+
+```text
++---------------+--------------+---------------+--------------+--------------+--------------------+--------------+
+| sensor_id     | city         | sensor_type   | zip          | owner        | in_operation_since | e-mail       |
++---------------+--------------+---------------+--------------+--------------+--------------------+--------------+
+|            42 | Brugge       |    temperatuur| 8000         | Sille        | 2022-01-01 12:00:00| yy@zz.com    |
+|            63 | Brugge       |    vochtigheid| 8000         | Nico         | 2021-05-05 12:00:00| bb@aa.be     |
+|            99 | Oostende     |    temperatuur| 8400         | Sille        | 2022-04-01 12:00:00| yy@zz.com    |
++---------------+--------------+---------------+--------------+--------------+--------------------+--------------+
+```
+
+Welke tabellen maak je om de database in 2e normaalvorm (2NF) te krijgen?
+
+A: Sensors tabel met kolommen id, type_id, in_operation_since, city, zip owner_id + Sensortypes tabel met type_id, description + Owners tabel met kolommen id, name, e-mail
+
+B: Sensors tabel met kolommen id, type_id, in_operation_since, city_id, owner_id + Sensortypes tabel met type_id, description + Owners tabel met kolommen id, name, e-mail + Cities tabel met kolommen city_id, city_name, city_zip
+
+C: Sensors tabel met kolommen id, type, in_operation_since, city_id, owner_id + Owners tabel met kolommen id, name, e-mail + Cities tabel met kolommen city_id, city_name, city_zip
+
+D: Sensors tabel met kolommen id, type, in_operation_since, city, zip, owner_id + Owners tabel met kolommen id, name, e-mail
+
+---
+oplossing:
+    vraag: 29
+    antwoord: D
+...
+
+### Vraag 30
+
+Gegeven volgend ER diagram:
+
+![ER diagram](./img/ER-example.png)
+
+Welke uitspraak is waar over dit ER diagram?
+
+A: 
+
+B: 
+
+C: 
+
+D: 
+
+---
+oplossing:
+    vraag: 30
+    antwoord: C
+...
