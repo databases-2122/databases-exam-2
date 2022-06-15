@@ -736,17 +736,17 @@ oplossing:
 
 Gegeven volgend ER diagram:
 
-![ER diagram](./img/ER-example.png)
+![ER diagram](./img/er-example.drawio.png)
 
 Welke uitspraak is waar over dit ER diagram?
 
-A: 
+A: Een map kan slechts bij 1 sessie gebruikt worden.
 
-B: 
+B: Elke map heeft altijd 1 sessie met een 0 tot N spelers.
 
-C: 
+C: Een sessie bestaat uit 1 of meerdere spelers op 1 map.
 
-D: 
+D: Een sessie kan geen map en geen spelers bevatten.
 
 ---
 oplossing:
