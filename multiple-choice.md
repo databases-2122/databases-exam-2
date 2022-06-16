@@ -14,7 +14,7 @@ Giscorrectie is van toepassing:
 * fout antwoord = - 1 / (n - 1)
 * geen antwoord = 0
 
-Vul bij het antwoord de letter in. Indien je geen antwoord wil geven op de vraag plaats dan 'X'.
+Vul bij het antwoord de letter in. Indien je geen antwoord wil geven op de vraag plaats dan 'X'. Het HTML commentaar moet je verwijderen. 
 
 Voorbeeld vraag:
 
@@ -59,7 +59,7 @@ D: Commandline tool om met de database te communiceren.
 ---
 oplossing:
     vraag: 1
-    antwoord: C
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 2
@@ -77,7 +77,7 @@ D: `SELECT * FROM mytable;`
 ---
 oplossing:
     vraag: 2
-    antwoord: D
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 3
@@ -95,7 +95,7 @@ D: `DOUBLE`
 ---
 oplossing:
     vraag: 3
-    antwoord: A
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 4
@@ -113,7 +113,7 @@ D: Het ophalen van `CHAR` data is sneller dan het ophalen van `VARCHAR` data.
 ---
 oplossing:
     vraag: 4
-    antwoord: D
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 5
@@ -131,7 +131,7 @@ D: Een Primary Key is 1 kolom in een tabel.
 ---
 oplossing:
     vraag: 5
-    antwoord: A
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 6
@@ -149,7 +149,7 @@ D: `FROM`
 ---
 oplossing:
     vraag: 6
-    antwoord: B
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 7
@@ -167,7 +167,7 @@ D: Logisch
 ---
 oplossing:
     vraag: 7
-    antwoord: B
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 8
@@ -185,7 +185,7 @@ D: Elke tabel heeft een Foreign Key.
 ---
 oplossing:
     vraag: 8
-    antwoord: A
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 9
@@ -203,7 +203,7 @@ D: Een join zonder `WHERE` clausule is geen geldige SQL syntax.
 ---
 oplossing:
     vraag: 9
-    antwoord: C
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 10
@@ -221,7 +221,7 @@ D: `CREATE USER ‘demo’ @ ‘%’;`
 ---
 oplossing:
     vraag: 10
-    antwoord: D
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 11
@@ -239,7 +239,7 @@ D: Rechten kunnen ingesteld worden per kolom.
 ---
 oplossing:
     vraag: 11
-    antwoord: B
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 12
@@ -257,7 +257,7 @@ D: `SHOW GRANTS FOR 'user'@'127.0.0.1';`
 ---
 oplossing:
     vraag: 12
-    antwoord: C
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 13
@@ -286,7 +286,7 @@ D: `DELETE FROM mysql.user;`
 ---
 oplossing:
     vraag: 13
-    antwoord: B
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 14
@@ -304,7 +304,7 @@ D: Een hashberekening kan niet ongedaan worden door de omgekeerde bewerking te u
 ---
 oplossing:
     vraag: 14
-    antwoord: D
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 15
@@ -322,7 +322,7 @@ D: Een hashberekening kan niet ongedaan worden door de omgekeerde bewerking te u
 ---
 oplossing:
     vraag: 15
-    antwoord: D
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 16
@@ -340,7 +340,7 @@ D: `LIST`
 ---
 oplossing:
     vraag: 16
-    antwoord: A
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 17
@@ -359,7 +359,7 @@ D: `INSERT INTO`
 ---
 oplossing:
     vraag: 17
-    antwoord: A
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 18
@@ -377,7 +377,7 @@ D: `INSERT INTO`
 ---
 oplossing:
     vraag: 18
-    antwoord: D
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 19
@@ -395,7 +395,7 @@ D: `INSERT INTO`
 ---
 oplossing:
     vraag: 19
-    antwoord: C
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 20
@@ -425,7 +425,7 @@ D: Het paswoord ontbreekt: `mysql -u root -p letmein`
 ---
 oplossing:
     vraag: 20
-    antwoord: A
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 21
@@ -443,7 +443,7 @@ D: Geen enkele SQL constraint is noodzakelijk
 ---
 oplossing:
     vraag: 21
-    antwoord: D
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 22
@@ -485,7 +485,7 @@ D: De waarde van data in de kolom *id* mag niet groter zijn dan 5.
 ---
 oplossing:
     vraag: 22
-    antwoord: C
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 23
@@ -530,7 +530,7 @@ D: De nieuwe namen in de enum worden automatisch overgenomen waardoor records zi
 ---
 oplossing:
     vraag: 23
-    antwoord: B
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 24
@@ -580,7 +580,7 @@ D: De tabel *employees* is leeg doordat alle records zijn verplaatst naar *teach
 ---
 oplossing:
     vraag: 24
-    antwoord: B
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 25
@@ -605,7 +605,7 @@ D: Door het ontbraken van een `SELECT` clausule zal er niets veranderen in te ta
 ---
 oplossing:
     vraag: 25
-    antwoord: C
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 26
@@ -639,7 +639,7 @@ D: `SELECT cust_name, cust_city FROM customers ORDER BY cust_name ASC, cust_city
 ---
 oplossing:
     vraag: 26
-    antwoord: A
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 27
@@ -669,7 +669,7 @@ D: `SELECT * FROM (SELECT finish_number, name FROM runners ORDER BY finish_numbe
 ---
 oplossing:
     vraag: 27
-    antwoord: A
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 28
@@ -699,7 +699,7 @@ D: `COUNT(DISTINCT(SELECT city FROM sensors);`
 ---
 oplossing:
     vraag: 28
-    antwoord: B
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 29
@@ -729,7 +729,7 @@ D: Sensors tabel met kolommen id, type, in_operation_since, city, zip, owner_id 
 ---
 oplossing:
     vraag: 29
-    antwoord: D
+    antwoord: <!--Antwoord hier -->
 ...
 
 ### Vraag 30
@@ -751,5 +751,5 @@ D: Een sessie kan geen map en geen spelers bevatten.
 ---
 oplossing:
     vraag: 30
-    antwoord: C
+    antwoord: <!--Antwoord hier -->
 ...
