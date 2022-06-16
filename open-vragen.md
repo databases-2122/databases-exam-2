@@ -6,7 +6,7 @@ Datum: 17/06/2022
 
 Lees deze instructies zeer zorgvuldig.
 
-Beantwoord de vragen door een SQL query en output result in de respectievelijke velden sql en text in te vullen. 
+Beantwoord de vragen door een SQL query en output result in de respectievelijke velden sql en text in te vullen.
 
 ```sql
 SELECT example FROM answer;
@@ -93,6 +93,28 @@ ORDER BY last_name, first_name;
 
 Maak 1 query voor:
 
+1. De acteur 'GROUCHO WILLIAMS' is van naam veranderd en heet nu 'MARS WILLIAMS', pas dit aan in de database.
+
+```sql
+UPDATE actor SET first_name = 'MARS', last_name = 'WILLIAMS' WHERE first_name = 'GROUCHO' AND last_name = 'WILLIAMS';
+```
+
+Geef het resultaat van de query ```SELECT * FROM actor WHERE last_name = 'WILLIAMS';```:
+
+```text
++----------+------------+-----------+---------------------+
+| actor_id | first_name | last_name | last_update         |
++----------+------------+-----------+---------------------+
+|       72 | SEAN       | WILLIAMS  | 2006-02-15 04:34:33 |
+|      137 | MORGAN     | WILLIAMS  | 2006-02-15 04:34:33 |
+|      172 | MARS       | WILLIAMS  | 2022-06-16 22:00:15 |
++----------+------------+-----------+---------------------+
+```
+
+### Vraag 3
+
+Maak 1 query voor:
+
 1. Geef de totale inkomsten (terug te vinden in de payment tabel) van juni 2005.
 1. Geef het antwoord de naam 'Total income June 2005'.
 
@@ -109,7 +131,13 @@ WHERE Year(payment_date) = '2005' AND Month(payment_date) = '6';
 +------------------------+
 ```
 
-### Vraag 3
+### Vraag 4
+
+Geef het conceptuele ER diagram van de Sakila databank.
+
+![Conceptual ER diagram](./img/conceptual-sakila.png)
+
+### Vraag 5
 
 Maak 1 query:
 
@@ -130,7 +158,7 @@ SELECT COUNT(*) AS 'Number of films with Carmen Hunt' FROM film_actor WHERE acto
 +----------------------------------+
 ```
 
-### Vraag 4
+### Vraag 6
 
 Maak 1 query:
 
@@ -168,7 +196,7 @@ LIMIT 15;
 +----------------------+
 ```
 
-### Vraag 5
+### Vraag 7
 
 Maak 1 query voor:
 
@@ -191,7 +219,7 @@ GROUP BY payment.staff_id;
 +--------------+-------------+
 ```
 
-### Vraag 6
+### Vraag 8
 
 Maak 1 query voor:
 
@@ -214,16 +242,95 @@ GROUP BY payment.customer_id ORDER BY SUM(amount) DESC LIMIT 1;
 +------------+-----------+------------------+-------------+------------+---------------+-------------+
 ```
 
-### Vraag 7
+### Vraag 9
 
 Maak 1 query voor:
 
-1. Geef voornaam, familienaam, adres, postcode, stad, land en het totale bedrag van de klant die het meest heeft uitgegeven.
+1. Geef de volledige stock van de winkel in Lethbridge.
+1. Geef de naam van de film en hoeveel keer de winkel de film bezit, noem deze kolom 'stock'.
+1. Sorteer de resultaten van meest naar minst en bij evenveel films in stock alfabetisch op titel.
+1. Beperk de resultaten in de output tot 15.
 
 ```sql
+SELECT title, count(inventory.film_id) AS stock FROM inventory 
+INNER JOIN film ON inventory.film_id = film.film_id
+WHERE store_id IN (
+    SELECT store_id FROM store WHERE address_id IN (
+        SELECT address_id FROM address WHERE city_id IN (
+            SELECT city_id from city WHERE city.city LIKE 'Lethbridge'
+        )
+    )
+)
+GROUP BY inventory.film_id
+ORDER BY stock DESC, title
+LIMIT 15;
 
 ```
 
 ```text
++-----------------------------+-------+
+| title                       | stock |
++-----------------------------+-------+
+| ACADEMY DINOSAUR            |     4 |
+| AFFAIR PREJUDICE            |     4 |
+| ALADDIN CALENDAR            |     4 |
+| ALAMO VIDEOTAPE             |     4 |
+| AMADEUS HOLY                |     4 |
+| AMISTAD MIDSUMMER           |     4 |
+| ANALYZE HOOSIERS            |     4 |
+| ANGELS LIFE                 |     4 |
+| ANONYMOUS HUMAN             |     4 |
+| APACHE DIVINE               |     4 |
+| ARACHNOPHOBIA ROLLERCOASTER |     4 |
+| ARIZONA BANG                |     4 |
+| ATTRACTION NEWTON           |     4 |
+| BARBARELLA STREETCAR        |     4 |
+| BASIC EASY                  |     4 |
++-----------------------------+-------+
+```
 
+### Vraag 10
+
+Maak 1 query voor:
+
+1. Geef de huidig uitgeleende stock van de winkel in Lethbridge.
+1. Geef de naam van de film en hoeveel keer de film uitgeleend is, noem deze kolom 'loaned'.
+1. Sorteer de resultaten van meest naar minst en bij evenveel films in stock alfabetisch op titel.
+1. Tip: een film die uitgeleend is, heeft als waarde NULL in de kolom *return_date* van tabel *rental*
+
+```sql
+SELECT title, count(inventory.film_id) AS loaned FROM inventory 
+INNER JOIN film ON inventory.film_id = film.film_id
+INNER JOIN rental ON inventory.inventory_id = rental.inventory_id
+WHERE store_id IN (
+    SELECT store_id FROM store 
+    INNER JOIN address ON store.address_id = address.address_id
+    INNER JOIN city ON address.city_id = city.city_id
+    WHERE city.city LIKE 'Lethbridge'
+) AND return_date IS NULL
+GROUP BY inventory.film_id
+ORDER BY loaned DESC, title
+LIMIT 15;
+```
+
+```text
++-----------------------+--------+
+| title                 | loaned |
++-----------------------+--------+
+| CREATURES SHAKESPEARE |      2 |
+| DANCES NONE           |      2 |
+| GUNFIGHT MOON         |      2 |
+| HALF OUTFIELD         |      2 |
+| INTENTIONS EMPIRE     |      2 |
+| SHOCK CABIN           |      2 |
+| ALONE TRIP            |      1 |
+| BAKED CLEOPATRA       |      1 |
+| BANG KWAI             |      1 |
+| BLANKET BEVERLY       |      1 |
+| BOOGIE AMELIE         |      1 |
+| BOULEVARD MOB         |      1 |
+| CAMELOT VACATION      |      1 |
+| CANDIDATE PERDITION   |      1 |
+| CANYON STOCK          |      1 |
++-----------------------+--------+
 ```
