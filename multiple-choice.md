@@ -311,13 +311,13 @@ oplossing:
 
 Met welk hash algoritme kunnen gevoelige gegevens zoals wachtwoorden veiliger in een database opgeslagen worden?
 
-A: Voor het hashen van gegevens is een encryptie sleutel nodig.
+A: DES
 
-B: Hashen van gegevens is veiliger wanneer gebruik gemaakt wordt van een vinegar.
+B: SHA-3
 
-C: Een salted hash voorkomt dat een aanvaller de database kan uitlezen.
+C: MD-5
 
-D: Een hashberekening kan niet ongedaan worden door de omgekeerde bewerking te uit te voeren.
+D: Bcrypt
 
 ---
 oplossing:
