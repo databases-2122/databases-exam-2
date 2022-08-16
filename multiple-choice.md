@@ -46,25 +46,25 @@ Veel succes!
 
 ### Vraag 1
 
-Wat is het doel van het `USE` statement in MySQL?
+Wat is de `mysql` tool in XAMPP?
 
-A: De database engine selecteren, bvb. MySQL of MariaDB.
+A: Tool om de database engine te selecteren, bvb. MySQL of MariaDB.
 
-B: Aanmelden op de database.
+B: Tool om te authenticeren met de database.
 
-C: Standaard database opgeven waarop queries uitgevoerd worden indien geen database specifiek opgegeven wordt.
+C: Tool om de standaard database op te geven waarop queries uitgevoerd worden indien geen database specifiek opgegeven wordt.
 
 D: Commandline tool om met de database te communiceren.
 
 ---
 oplossing:
     vraag: 1
-    antwoord: C
+    antwoord: D
 ...
 
 ### Vraag 2
 
-Met welk statement kunnen alle kolommen van een tabel opgevraagd worden?
+Met welk statement wordt slechts 1 kolom van een tabel opgevraagd?
 
 A: `SELECT mytable;`
 
@@ -77,12 +77,12 @@ D: `SELECT * FROM mytable;`
 ---
 oplossing:
     vraag: 2
-    antwoord: D
+    antwoord: B
 ...
 
 ### Vraag 3
 
-Met welk keyword kan je voorkomen dat dubbele resultaten teruggeven worden?
+Met welk keyword kan je filteren in een query?
 
 A: `DISTINCT`
 
@@ -95,7 +95,7 @@ D: `DOUBLE`
 ---
 oplossing:
     vraag: 3
-    antwoord: A
+    antwoord: C
 ...
 
 ### Vraag 4
@@ -104,25 +104,25 @@ Welke bewering is correct?
 
 A: `VARCHAR` data neemt meer plaats in dan `CHAR` data.
 
-B: Berekeningen met `DECIMAL` data zijn sneller dan berekeningen met `FLOAT` data.
+B: Berekeningen met `DECIMAL` data zijn trager dan berekeningen met `FLOAT` data.
 
 C: Berekeningen met `FLOAT` data zijn nauwkeuriger dan berekeningen met `DECIMAL` data.
 
-D: Het ophalen van `CHAR` data is sneller dan het ophalen van `VARCHAR` data.
+D: Het ophalen van `CHAR` data is trager dan het ophalen van `VARCHAR` data.
 
 ---
 oplossing:
     vraag: 4
-    antwoord: D
+    antwoord: B
 ...
 
 ### Vraag 5
 
 Welke bewering is correct?
 
-A: De waarden van een Primary Key zijn uniek.
+A: De waarden van een Primary Key zijn niet altijd uniek.
 
-B: Een tabel kan meerdere Primary Keys bevatten.
+B: Een Primary Key kan uit meerdere kolommen bestaan.
 
 C: Een Primary Key kan `NULL` bevatten.
 
@@ -131,12 +131,12 @@ D: Een Primary Key is 1 kolom in een tabel.
 ---
 oplossing:
     vraag: 5
-    antwoord: A
+    antwoord: B
 ...
 
 ### Vraag 6
 
-Met welk keyword kan je filteren op een berekend veld (calculated field)?
+Met welk keyword kan je filteren op een berekend veld een naam geven?
 
 A: `WHERE`
 
@@ -149,12 +149,12 @@ D: `FROM`
 ---
 oplossing:
     vraag: 6
-    antwoord: B
+    antwoord: C
 ...
 
 ### Vraag 7
 
-Hoe wordt een Entiteit-Relatie –ER – diagram genoemd waarin datatypes worden weergegeven?
+Hoe wordt een Entiteit-Relatie –ER – diagram genoemd waarin gegarandeerd alle tabellen worden weergegeven?
 
 A: Virtueel
 
@@ -174,9 +174,9 @@ oplossing:
 
 Welke bewering is correct?
 
-A: Een Foreign Key in een tabel heeft dezelfde waarde als een Primary Key in een andere tabel.
+A: Een Foreign Key is legt een relatie met de Primary Key van dezelfde tabel.
 
-B: De waarden van een Foreign Key zijn uniek.
+B: Als de waarden van een Foreign Key uniek zijn dan is er sprake van een 1-op-1 relatie tussen de tabellen.
 
 C: Een tabel kan hoogstens 1 Foreign Key bevatten.
 
@@ -185,16 +185,16 @@ D: Elke tabel heeft een Foreign Key.
 ---
 oplossing:
     vraag: 8
-    antwoord: A
+    antwoord: B
 ...
 
 ### Vraag 9
 
 Welke bewering is correct?
 
-A: Het cartesisch product van twee tabellen verkrijg je door een `INNER JOIN` uit te voeren.
+A: Het cartesisch product van twee tabellen verkrijg je door een `LEFT JOIN` uit te voeren.
 
-B: Een join is de combinatie van data uit twee tabellen.
+B: Een join is de combinatie van data uit twee of meer tabellen.
 
 C: Een join kan uitgevoerd worden zonder expliciet een `JOIN` clausule toe te voegen in de query.
 
@@ -208,7 +208,7 @@ oplossing:
 
 ### Vraag 10
 
-Op welke manier kan je instellen dat een gebruiker toegang heeft van overal?
+Op welke manier kan je voorkomen dat een gebruiker toegang heeft van overal?
 
 A: `CREATE USER ‘demo’ @ ‘localhost’;`
 
@@ -221,7 +221,7 @@ D: `CREATE USER ‘demo’ @ ‘%’;`
 ---
 oplossing:
     vraag: 10
-    antwoord: D
+    antwoord: A
 ...
 
 ### Vraag 11
@@ -232,7 +232,7 @@ A: Rechten gelden op alle databases op de server.
 
 B: Rechten kunnen ingesteld worden per tabel.
 
-C: Rechten kunnen ingesteld worden per database.
+C: Rechten kunnen ingesteld worden per rij.
 
 D: Rechten kunnen ingesteld worden per kolom.
 
@@ -244,7 +244,7 @@ oplossing:
 
 ### Vraag 12
 
-Met welk statement kunnen alle rechten getoond worden van de gebruiker **user** op **localhost**?
+Met welk statement kunnen alle rechten getoond worden van de gebruiker **user**?
 
 A: `SHOW GRANTS FOR 'user'@'%';`
 
@@ -257,7 +257,7 @@ D: `SHOW GRANTS FOR 'user'@'127.0.0.1';`
 ---
 oplossing:
     vraag: 12
-    antwoord: C
+    antwoord: A
 ...
 
 ### Vraag 13
@@ -295,21 +295,21 @@ Welke bewering is correct?
 
 A: Voor het hashen van gegevens is een encryptie sleutel nodig.
 
-B: Hashen van gegevens is veiliger wanneer gebruik gemaakt wordt van een vinegar.
+B: Twee hashes die hetzelfde zijn, hadden dezelfde input voor het hashalgoritme.
 
 C: Een salted hash voorkomt dat een aanvaller de database kan uitlezen.
 
-D: Een hashberekening kan niet ongedaan worden door de omgekeerde bewerking te uit te voeren.
+D: Een hashberekening kan ongedaan worden gemaakt door de omgekeerde bewerking te uit te voeren.
 
 ---
 oplossing:
     vraag: 14
-    antwoord: D
+    antwoord: B
 ...
 
 ### Vraag 15
 
-Met welk hash algoritme kunnen gevoelige gegevens zoals wachtwoorden veiliger in een database opgeslagen worden?
+Welk hash algoritme voor opslag in een database van gevoelige gegevens zoals wachtwoorden is verouderd en onveilig?
 
 A: DES
 
@@ -322,12 +322,12 @@ D: Bcrypt
 ---
 oplossing:
     vraag: 15
-    antwoord: D
+    antwoord: C
 ...
 
 ### Vraag 16
 
-Welk MySQL datatype kan gebruikt worden om een lijst van mogelijke waardes op te geven en waarvan meerdere opties opgegeven kunnen worden?
+Welk MySQL datatype kan gebruikt worden om een lijst van mogelijke waardes op te geven en waarvan slechts 1 optie opgegeven kan worden?
 
 A: `SET`
 
@@ -340,13 +340,12 @@ D: `LIST`
 ---
 oplossing:
     vraag: 16
-    antwoord: A
+    antwoord: B
 ...
 
 ### Vraag 17
 
-Wat is een voorbeeld van de SQL Data Definition Language (DDL) CRUD Update functie?
-
+Wat is een voorbeeld van de SQL Data Definition Language (DDL) CRUD Delete functie?
 
 A: `ALTER COLUMN`
 
@@ -359,12 +358,12 @@ D: `INSERT INTO`
 ---
 oplossing:
     vraag: 17
-    antwoord: A
+    antwoord: C
 ...
 
 ### Vraag 18
 
-Wat is een voorbeeld van de SQL Data Manipulation Language (DML)  CRUD Create functie?
+Wat is een voorbeeld van de SQL Data Manipulation Language (DML) CRUD Create functie?
 
 A: `SELECT`
 
@@ -430,7 +429,7 @@ oplossing:
 
 ### Vraag 21
 
-Welke SQL constraint is noodzakelijk voor een Primary Key?
+Welke SQL constraint zorgt voor het automatisch invullen van data?
 
 A: `NOT NULL`
 
@@ -438,12 +437,12 @@ B: `AUTO_INCREMENT`
 
 C: `UNIQUE`
 
-D: Geen enkele SQL constraint is noodzakelijk
+D: `CREATE INDEX`
 
 ---
 oplossing:
     vraag: 21
-    antwoord: D
+    antwoord: B
 ...
 
 ### Vraag 22
@@ -744,12 +743,12 @@ A: Een map kan slechts bij 1 sessie gebruikt worden.
 
 B: Elke map heeft altijd 1 sessie met een 0 tot N spelers.
 
-C: Een sessie bestaat uit 1 of meerdere spelers op 1 map.
+C: Een sessie bestaat uit hoogstens 1 speler op 1 map.
 
-D: Een sessie kan geen map en geen spelers bevatten.
+D: Een sessie kan niet zonder map of spelers bestaan.
 
 ---
 oplossing:
     vraag: 30
-    antwoord: C
+    antwoord: D
 ...
