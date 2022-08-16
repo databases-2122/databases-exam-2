@@ -35,7 +35,13 @@ Tip het database ER diagram:
 Onder de folder source vind je sakila-data.sql en sakila-schema.sql terug. Voer de scripts uit en toon alle data die in de *language* tabel terug te vinden is.
 
 ```sql
+<<<<<<< HEAD
 <!--Antwoord hier -->
+=======
+SOURCE sakila-schema.sql;
+SOURCE sakila-data.sql;
+SELECT * FROM language;
+>>>>>>> answers
 ```
 
 ```text
