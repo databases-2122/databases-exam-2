@@ -1,6 +1,6 @@
 # Examen Databases Open Vragen
 
-Datum: 17/06/2022
+Datum: 18/08/2022
 
 ## Instructies
 

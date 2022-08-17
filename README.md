@@ -1,8 +1,8 @@
 # Examen Databases
 
-Datum: 17/06/2022
-Start: 8u15
-Einde: 10u15
+Datum: 18/08/2022
+Start: 9u15
+Einde: 11u15
 
 ## Instructies
 
