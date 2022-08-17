@@ -35,13 +35,7 @@ Tip het database ER diagram:
 Onder de folder source vind je sakila-data.sql en sakila-schema.sql terug. Voer de scripts uit en toon alle data die in de *language* tabel terug te vinden is.
 
 ```sql
-<<<<<<< HEAD
 <!--Antwoord hier -->
-=======
-SOURCE sakila-schema.sql;
-SOURCE sakila-data.sql;
-SELECT * FROM language;
->>>>>>> answers
 ```
 
 ```text
@@ -52,9 +46,9 @@ SELECT * FROM language;
 
 Maak 1 query voor:
 
-1. Geef alle acteurs hun voornaam en familienaam terug waarvan hun familienaam begint met een 'T'.
+1. Geef alle acteurs hun voornaam en familienaam terug waarvan hun familienaam begint met een 'W'.
 1. De antwoorden dienen in 1 kolom genaamd 'Actor Name' teruggegeven te worden.
-1. Allemaal in kleine letters met een spatie tussen de voornaam en de familienaam.
+1. Allemaal in hoofdletters met een spatie tussen de voornaam en de familienaam.
 1. Gesorteerd volgens familienaam en indien dezelfde familienaam ook nog gesorteerd volgens voornaam.
 
 ```sql
@@ -69,13 +63,11 @@ Maak 1 query voor:
 
 Maak 1 query voor:
 
-1. De acteur 'GROUCHO WILLIAMS' is van naam veranderd en heet nu 'MARS WILLIAMS', pas dit aan in de database.
+1. De naam van de acteur 'BURT TEMPLE' bevat een typo en heet 'BART TEMPLE', pas dit aan in de database.
 
 ```sql
 <!--Antwoord hier -->
 ```
-
-Geef het resultaat van de query ```SELECT * FROM actor WHERE last_name = 'WILLIAMS';```:
 
 ```text
 <!--Antwoord hier -->
@@ -85,11 +77,11 @@ Geef het resultaat van de query ```SELECT * FROM actor WHERE last_name = 'WILLIA
 
 Maak 1 query voor:
 
-1. Geef de totale inkomsten (terug te vinden in de payment tabel) van juni 2005.
-1. Geef het antwoord de naam 'Total income June 2005'.
+1. Geef de totale inkomsten (terug te vinden in de payment tabel) van mei 2005.
+1. Geef het antwoord de naam 'Total income May 2005'.
 
 ```sql
-<!--Antwoord hier --> 
+<!--Antwoord hier -->
 ```
 
 ```text
@@ -106,9 +98,9 @@ Geef het conceptuele ER diagram van de Sakila databank.
 
 Maak 1 query:
 
-1. Om te bepalen in hoeveel films de acteur 'CARMEN HUNT' heeft meegespeeld.
+1. Om te bepalen in hoeveel films de acteur 'Adam Grant' heeft meegespeeld.
 1. Maak gebruik van subqueries.
-1. Geef het antwoord de naam 'Number of films with Carmen Hunt'.
+1. Geef het antwoord de naam 'Number of films with Adam Grant'.
 
 ```sql
 <!--Antwoord hier -->
@@ -125,9 +117,10 @@ Maak 1 query:
 1. Maak 1 query om een lijst van alle film titels uit de categorie 'New' weer te geven.
 1. Maak gebruik van JOINS.
 1. Beperk het aantal films in de output tot 15.
+1. Sorteer het resultaat van Z -> A.
 
 ```sql
-<!--Antwoord hier --> 
+<!--Antwoord hier -->
 ```
 
 ```text
@@ -138,7 +131,7 @@ Maak 1 query:
 
 Maak 1 query voor:
 
-1. Geef per personeelslid de gemiddelde prijs van een betaling uit juni 2005.
+1. Geef per personeelslid de gemiddelde prijs van een betaling uit juli 2005.
 1. Voornaam en familienaam van het personeelslid dienen in 1 kolom genaamd 'Employee' teruggegeven te worden met een spatie tussen voornaam en familienaam.
 
 ```sql
@@ -167,14 +160,13 @@ Maak 1 query voor:
 
 Maak 1 query voor:
 
-1. Geef de volledige stock van de winkel in Lethbridge.
+1. Geef de volledige stock van de winkel in Woodridge.
 1. Geef de naam van de film en hoeveel keer de winkel de film bezit, noem deze kolom 'stock'.
 1. Sorteer de resultaten van meest naar minst en bij evenveel films in stock alfabetisch op titel.
 1. Beperk de resultaten in de output tot 15.
 
 ```sql
 <!--Antwoord hier -->
-
 ```
 
 ```text
@@ -185,7 +177,7 @@ Maak 1 query voor:
 
 Maak 1 query voor:
 
-1. Geef de huidig uitgeleende stock van de winkel in Lethbridge.
+1. Geef de huidig uitgeleende stock van de winkel in Woodridge.
 1. Geef de naam van de film en hoeveel keer de film uitgeleend is, noem deze kolom 'loaned'.
 1. Sorteer de resultaten van meest naar minst en bij evenveel films in stock alfabetisch op titel.
 1. Tip: een film die uitgeleend is, heeft als waarde NULL in de kolom *return_date* van tabel *rental*
