@@ -59,11 +59,7 @@ D: Commandline tool om met de database te communiceren.
 ---
 oplossing:
     vraag: 1
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: D
->>>>>>> answers
 ...
 
 ### Vraag 2
@@ -81,13 +77,8 @@ D: `SELECT * FROM mytable;`
 ---
 oplossing:
     vraag: 2
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: B
->>>>>>> answers
 ...
-
 ### Vraag 3
 
 Met welk keyword kan je filteren in een query?
@@ -103,11 +94,7 @@ D: `DOUBLE`
 ---
 oplossing:
     vraag: 3
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: C
->>>>>>> answers
 ...
 
 ### Vraag 4
@@ -125,12 +112,9 @@ D: Het ophalen van `CHAR` data is trager dan het ophalen van `VARCHAR` data.
 ---
 oplossing:
     vraag: 4
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: B
->>>>>>> answers
 ...
+
 
 ### Vraag 5
 
@@ -147,11 +131,7 @@ D: Een Primary Key is 1 kolom in een tabel.
 ---
 oplossing:
     vraag: 5
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: B
->>>>>>> answers
 ...
 
 ### Vraag 6
@@ -169,11 +149,7 @@ D: `FROM`
 ---
 oplossing:
     vraag: 6
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: C
->>>>>>> answers
 ...
 
 ### Vraag 7
@@ -209,11 +185,7 @@ D: Elke tabel heeft een Foreign Key.
 ---
 oplossing:
     vraag: 8
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: B
->>>>>>> answers
 ...
 
 ### Vraag 9
@@ -249,11 +221,7 @@ D: `CREATE USER ‘demo’ @ ‘%’;`
 ---
 oplossing:
     vraag: 10
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: A
->>>>>>> answers
 ...
 
 ### Vraag 11
@@ -289,11 +257,7 @@ D: `SHOW GRANTS FOR 'user'@'127.0.0.1';`
 ---
 oplossing:
     vraag: 12
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: A
->>>>>>> answers
 ...
 
 ### Vraag 13
@@ -340,11 +304,7 @@ D: Een hashberekening kan ongedaan worden gemaakt door de omgekeerde bewerking t
 ---
 oplossing:
     vraag: 14
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: B
->>>>>>> answers
 ...
 
 ### Vraag 15
@@ -362,11 +322,7 @@ D: Bcrypt
 ---
 oplossing:
     vraag: 15
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: C
->>>>>>> answers
 ...
 
 ### Vraag 16
@@ -384,11 +340,7 @@ D: `LIST`
 ---
 oplossing:
     vraag: 16
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: B
->>>>>>> answers
 ...
 
 ### Vraag 17
@@ -406,11 +358,7 @@ D: `INSERT INTO`
 ---
 oplossing:
     vraag: 17
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: C
->>>>>>> answers
 ...
 
 ### Vraag 18
@@ -494,11 +442,7 @@ D: `CREATE INDEX`
 ---
 oplossing:
     vraag: 21
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: B
->>>>>>> answers
 ...
 
 ### Vraag 22
@@ -806,9 +750,5 @@ D: Een sessie kan niet zonder map of spelers bestaan.
 ---
 oplossing:
     vraag: 30
-<<<<<<< HEAD
     antwoord: <!--Antwoord hier -->
-=======
-    antwoord: D
->>>>>>> answers
 ...
