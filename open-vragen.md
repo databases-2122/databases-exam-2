@@ -69,6 +69,8 @@ Maak 1 query voor:
 <!--Antwoord hier -->
 ```
 
+Geef het resultaat van de query ```SELECT * FROM actor WHERE last_name = 'TEMPLE';```:
+
 ```text
 <!--Antwoord hier -->
 ```
